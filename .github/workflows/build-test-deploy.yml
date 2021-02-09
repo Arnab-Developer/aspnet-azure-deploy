@@ -31,6 +31,9 @@ jobs:
     - name: Test
       run: dotnet test src\AspnetAzureDeploy.sln --no-build --verbosity normal --configuration Release
 
+    - name: Publish
+      run: dotnet publish src\AspnetAzureDeploy.sln --configuration Release
+
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v2
       with:
