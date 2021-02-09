@@ -1,4 +1,8 @@
-using System;
+using AspnetAzureDeploy.WebApp.Controllers;
+using Castle.Core.Logging;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Moq;
 using Xunit;
 
 namespace AspnetAzureDeploy.Test
@@ -8,7 +12,9 @@ namespace AspnetAzureDeploy.Test
         [Fact]
         public void Test1()
         {
-            Assert.Equal("hello", "hello");
+            HomeController homeController = new(new Mock<ILogger<HomeController>>().Object);
+            IActionResult actionResult = homeController.Index();
+            Assert.Equal("Index", ((ViewResult)actionResult).ViewName);
         }
     }
 }
