@@ -21,3 +21,14 @@ Deploy ASP.NET app to azure with GitHub action.
     publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
     package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp
 ```
+
+## Tech stack
+
+* .NET 5
+* C# 9
+* xunit for unit testing
+* Visual Studio 2019
+
+## Contribution
+
+If you want to contribute in this repo then create an issue and let me know how you want to contribute.
