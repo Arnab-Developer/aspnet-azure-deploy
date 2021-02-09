@@ -1,5 +1,3 @@
-using System;
-
 namespace AspnetAzureDeploy.WebApp.Models
 {
     public class ErrorViewModel
