@@ -16,7 +16,8 @@ namespace AspnetAzureDeploy.WebApp.Controllers
 
         public IActionResult Index()
         {
-            return View("Index");
+            Student s = new() { Id = 1, Name = "jon doe", Subject = "javascript" };
+            return View("Index", s);
         }
 
         public IActionResult Privacy()

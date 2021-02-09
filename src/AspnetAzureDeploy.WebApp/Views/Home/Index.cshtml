@@ -1,8 +1,19 @@
-﻿@{
+﻿@model Student
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Deploy ASP.NET app to azure with GitHub action.</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <table>
+        <tr>
+            <td>name</td>
+            <td>subject</td>
+        </tr>
+        <tr>
+            <td>@Model.Name</td>
+            <td>@Model.Subject</td>
+        </tr>
+    </table>
 </div>
